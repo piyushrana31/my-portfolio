@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Piyush's Portfolio</title>
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(-300px);
+            transition: opacity 3s ease-out, transform 1.5s ease-out;
+        }
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #nav-links.active {
+            display: flex;
+            flex-direction: column;
+            position:absolute;
+            top: 60px;
+            left: 0px;
+            height: auto;
+            width: 100%;
+            background-color: slategrey;
+            padding: 15px;
+        }
+
+        
+    </style>
+</head>
+<body id="top">
+     <!-- nav bar starts from here -->
+     <nav class="bg-black fixed w-full p-1">
+        <div class="flex justify-between flex-row">
+            <div class="flex items-center">
+                <img class="md:h-9 md:w-9 h-6 w-6 rounded-full md:mx-4 mx-2" src="./me.jpg" alt="my picture">
+                <p class="text-white md:font-bold md:text-3xl text-lg font-semibold mb-1">Piyush Rana</p>
+            </div>
+            <div>
+                <ul class="md:flex md:mx-4 md:my-4 hidden md:flex-row flex-cols" id="nav-links">
+                    <li class="mx-4 text-white cursor-pointer text-center"><a href="#top">Home</a></li>
+                    <li class="mx-4 text-white cursor-pointer text-center"><a href="./aboutMe.html" target="_blank">Myself</a></li>
+                    <li class="mx-4 text-white cursor-pointer text-center"><a href="./contactMe.html" target="_blank">Contact Me</a></li>
+                    <li class="mx-4 text-white cursor-pointer text-center"><a href="./education.html" target="_blank">Education</a></li>
+                    <li class="mx-4 text-white cursor-pointer text-center"><a href="#carousel">My certifications</a></li>
+                </ul>
+            </div>
+            <div class="md:hidden text-4xl font-semibold mb-2 bg-gray-800" id="menu-icon"><a href="#">&#8801</a></div>
+        </div>
+     </nav>
+     <!-- nav bar ends here -->
+
+     <!-- main function starts from here -->
+     <div class="bg-[url('./images/first.avif')] h-[700px] w-full
+      flex justify-center items-center md:flex-row flex-col-reverse">
+        <div class="md:h-40 md:w-[500px] md:mx-24 h-80 w-80 ">
+            <p class="text-white font-bold text-4xl mb-4 text-left">I am <span id="auto-typing-name"></span></p>
+            <p class="text-white text-lg text-left"> I’m a passionate web developer specializing in
+                creating dynamic, responsive, and user
+               friendly websites. With expertise in front-end
+                and back-end development, 
+               I bring ideas to life using modern
+                technologies and a keen eye for design. My
+                goal is to build seamless web experiences
+                that solve real-world problems and leave a
+                lasting impact</p>
+        </div>
+        <div class="">
+            <img class="h-[250px] w-[250px] rounded-full mt-10 mr-6 hover:grayscale-[70%] mb-2" src="./me.jpg" alt="my image">
+        </div>
+     </div>
+     <!-- main function ends here -->
+
+     <!-- expertise block starts from here -->
+
+     <div class="h-auto w-full flex flex-col items-center text-center ">
+         <!-- experiences in -->
+        <div class="w-full h-auto flex flex-col items-center bg-[#141414]">
+            <p class="text-gray-500 font-bold text-3xl md:text-4xl text-center mt-2">Expertise In</p>
+            <div class="flex justify-center md:space-x-2 space-x-1 w-full">
+                <div class="h-1 w-1 border-b-4 border-yellow-500 rounded-full md:mt-3 mt-2"></div>
+                <div class="h-1 w-1 border-b-4 border-yellow-500 rounded-full md:mt-3 mt-2"></div>
+                <div class="h-1 md:w-28 w-10 border-b-4 md:border-yellow-500 border-yellow-300 rounded-3xl md:mt-3 mt-2"></div>
+                <div class="h-1 w-1 border-b-4 border-yellow-500 rounded-full md:mt-3 mt-2"></div>
+                <div class="h-1 w-1 border-b-4 border-yellow-500 rounded-full md:mt-3 mt-2"></div>
+            </div>
+            <div class="flex flex-row justify-evenly items-center w-full h-auto mt-2">
+                <div class="fade-in">
+                    <img class="md:h-[100px] h-[70px] md:w-[100px] w-[70px] my-8" src="./images/htmlImage.png" alt="html logo image">
+                </div>
+                <div class="fade-in">
+                    <img class="md:h-[100px] h-[80px] md:w-[160px] w-[120px] my-8" src="./images/cssImage.png" alt="css logo image">
+                </div>
+                <div class="fade-in">
+                    <img class="md:h-[100px] h-[70px] md:w-[100px] w-[70px] my-8" src="./images/jsImage.webp" alt="js logo image">
+                </div>
+            </div>
+        </div>
+
+        <!-- frameworks -->
+        <div class="w-full h-auto flex flex-col items-center bg-slate-950">
+            <p class="text-gray-500 font-bold text-3xl md:text-4xl text-center mt-2">FRAMEWORKS</p>
+            <div class="flex justify-center md:space-x-2 space-x-1 w-full">
+                <div class="h-1 w-1 border-b-4 border-yellow-500 rounded-full md:mt-3 mt-2"></div>
+                <div class="h-1 w-1 border-b-4 border-yellow-500 rounded-full md:mt-3 mt-2"></div>
+                <div class="h-1 md:w-28 w-10 border-b-4 md:border-yellow-500 border-yellow-300 rounded-3xl md:mt-3 mt-2"></div>
+                <div class="h-1 w-1 border-b-4 border-yellow-500 rounded-full md:mt-3 mt-2"></div>
+                <div class="h-1 w-1 border-b-4 border-yellow-500 rounded-full md:mt-3 mt-2"></div>
+            </div>
+            <div class="flex justify-evenly items-center w-full h-auto mt-2">
+                <div class="fade-in">
+                    <img class="md:h-[100px] h-[70px] md:w-[100px] w-[70px] my-8" src="./images/tialwind.png" alt="tailwind logo image">
+                </div>
+                <div class="fade-in">
+                    <img class="md:h-[100px] h-[80px] md:w-[150px] w-[140px] my-8" src="./images/nodejs.png" alt="nodeJs logo image">
+                </div>
+                <div class="fade-in">
+                    <img class="md:h-[100px] h-[70px] md:w-[100px] w-[70px] my-8" src="./images/React-icon.svg.png" alt="React logo image">
+                </div>
+            </div>
+        </div>
+
+        <!-- databases -->
+        <div class="w-full h-auto flex flex-col items-center bg-[#141414]">
+            <p class="text-gray-500 font-bold text-3xl md:text-4xl text-center mt-2">DATABASES</p>
+            <div class="flex justify-center md:space-x-2 space-x-1 w-full">
+                <div class="h-1 w-1 border-b-4 border-yellow-500 rounded-full md:mt-3 mt-2"></div>
+                <div class="h-1 w-1 border-b-4 border-yellow-500 rounded-full md:mt-3 mt-2"></div>
+                <div class="h-1 md:w-28 w-10 border-b-4 md:border-yellow-500 border-yellow-300 rounded-3xl md:mt-3 mt-2"></div>
+                <div class="h-1 w-1 border-b-4 border-yellow-500 rounded-full md:mt-3 mt-2"></div>
+                <div class="h-1 w-1 border-b-4 border-yellow-500 rounded-full md:mt-3 mt-2"></div>
+            </div>
+            <div class="flex justify-evenly items-center w-full h-auto mt-2">
+                <div class="fade-in">
+                    <img class="md:h-[100px] h-[70px] md:w-[300px] w-[200px] my-8" src="./images/Mongodb.png" alt="MongoDb logo image">
+                </div>
+                <div class="fade-in">
+                    <img class="md:h-[100px] h-[70px] md:w-[150px] w-[120px] my-8" src="./images/Mysql_logo.png" alt="My_sql logo image">
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- expertise block ends here -->
+
+     <!-- my certificates section starts here -->
+     <div class="w-full h-auto flex flex-col items-center bg-slate-950">
+        <p class="text-gray-500 font-bold text-3xl md:text-4xl text-center mt-2">My Certifications</p>
+        <div class="flex justify-center md:space-x-2 space-x-1 w-full">
+            <div class="h-1 w-1 border-b-4 border-yellow-500 rounded-full md:mt-3 mt-2"></div>
+            <div class="h-1 w-1 border-b-4 border-yellow-500 rounded-full md:mt-3 mt-2"></div>
+            <div class="h-1 md:w-28 w-10 border-b-4 md:border-yellow-500 border-yellow-300 rounded-3xl md:mt-3 mt-2"></div>
+            <div class="h-1 w-1 border-b-4 border-yellow-500 rounded-full md:mt-3 mt-2"></div>
+            <div class="h-1 w-1 border-b-4 border-yellow-500 rounded-full md:mt-3 mt-2"></div>
+        </div>
+        <div class="relative w-full max-w-2xl overflow-hidden my-10">
+            <div class="relative mx-2 h-auto md:h-auto w-full">
+                <div id="carousel" class="flex transition-transform duration-900 ease-in-out">
+                    <img src="./certificates/DSA.png" class="w-full flex-shrink-0 rounded-lg" alt="Nature">
+                    <img src="./certificates/Cpp.png" class="w-full flex-shrink-0 rounded-lg" alt="City">
+                    <img src="./certificates/C.png" class="w-full flex-shrink-0 rounded-lg" alt="Ocean">
+                    <img src="./certificates/bitsAndBytes.png" class="w-full flex-shrink-0 rounded-lg" alt="Mountains">
+                    <img src="./certificates/FundamentalsOfCN.png" class="w-full flex-shrink-0 rounded-lg" alt="Mountains">
+                    <img src="./certificates/IntroToHardware.png" class="w-full flex-shrink-0 rounded-lg" alt="Mountains">
+                    <img src="./certificates/LAN.png" class="w-full flex-shrink-0 rounded-lg" alt="Mountains">
+                    <img src="./certificates/LogicGates.png" class="w-full flex-shrink-0 rounded-lg" alt="Mountains">
+                    <img src="./certificates/PacketSwitching.png" class="w-full flex-shrink-0 rounded-lg" alt="Mountains">
+                    <img src="./certificates/TCP-IP.png" class="w-full flex-shrink-0 rounded-lg" alt="Mountains">
+                </div>
+            </div>
+    
+            <button id="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
+                &#10094;
+            </button>
+            <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
+                &#10095;
+            </button>
+        </div>
+    </div>
+     <!-- my certificates section ends here -->
+<script src="script.js"></script>
+</body>
+</html>

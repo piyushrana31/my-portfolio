@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>First Page</title>
+<style>
+
+.contain{
+  display: flex;
+  justify-content: space-around;
+}
+
+.text-area{
+  height: 200px;
+  width: 200px;
+  border: 2px solid whitesmoke;
+  border-radius: 50%;
+}
+
+.text-area > p{
+  color: white;
+  font-family: sans-serif;
+  text-align:center;
+  padding: 30px;
+  font-size: x-large;
+  font-weight:lighter;
+}
+
+body{
+  background-color:	#080707;
+}
+
+img{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  cursor: grab;
+}
+
+.main-div{
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+  align-items: center;
+}
+
+.typing-text {
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 5rem;
+  height: auto;
+  width: 850px;
+  white-space: wrap; /* Prevent wrapping of text */
+  overflow: hidden; /** Hide overflowing text */
+}
+</style>
+</head>
+<body>
+<div class="main-div">
+  <div class="typing-text"></div>
+</div>
+
+<div class="contain">
+  <div class="text-content">
+    <div class="draggable" draggable="true" data-url="./bootingPage.html"><img src="./me1.jpg" alt="my cartoon image"></div>
+  </div>
+  <div class="text-area">
+    <p>drag image to know me more</p>
+  </div>
+</div>
+
+
+<script>
+const typingText = document.querySelector('.typing-text');
+const text = "Hi there,\n Piyush Rana this side."; // Replace with your desired text
+let i = 0;
+
+function type() {
+  if (i < text.length) {
+    typingText.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type, 70); // Adjust typing speed (milliseconds)
+  } else {
+    // Reset for looping
+    i = 0;
+    typingText.innerHTML = "";
+    setTimeout(type, 700); // Adjust delay before next loop (milliseconds) 
+  }
+}
+type(); // Start the typing animation
+
+const draggables = document.querySelectorAll('.draggable');
+const dropArea = document.querySelector('.text-area');
+
+      // Drag start event
+      draggables.forEach(item => {
+          item.addEventListener('dragstart', (e) => {
+              e.dataTransfer.setData('text/plain', e.currentTarget.getAttribute('data-url'));
+          });
+      });
+
+      // Drag over event to allow drop
+      dropArea.addEventListener('dragover', (e) => {
+          e.preventDefault();
+          dropArea.style.background = "#181818";
+      });
+
+      // Drop event to open the URL
+      dropArea.addEventListener('drop', (e) => {
+          e.preventDefault();
+          dropArea.style.background = "6a3b3b";
+          const url = e.dataTransfer.getData('text/plain');
+          if (url) {
+              window.open(url, '_blank');
+          }
+      });
+
+      // Drag leave event to reset drop area style
+      dropArea.addEventListener('dragleave', () => {
+          dropArea.style.background = "#000000";
+});
+
+</script>
+
+</body>
+</html>

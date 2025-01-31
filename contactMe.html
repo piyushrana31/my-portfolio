@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Connect</title>
+</head>
+<body class="bg-black">
+    <!-- center heading div -->
+    <div>
+        <h1 class="text-white w-full mt-3 text-2xl md:text-5xl font-bold font-sans text-center">Connect</h1>
+        <p class="text-[#71797E] text-center mt-2 text-sm md:text-xl">Connect me through social media and other comminication channels.</p>
+    </div>
+
+    <div class="flex justify-between items-center md:flex-row flex-col w-full md:mt-10 mt-4">
+        <!-- Left Side: Contact Form -->
+        <div class="md:w-[50%] w-[80%] lg:ml-8 md:mx-4 mx-6">
+            <form>
+                <div>
+                    <label for="name" class="text-white block font-medium text-lg my-2">Name:</label>
+                    <input id="name" type="text" placeholder="Enter your name here" class="border border-white rounded-md w-full h-[50px] text-gray-400 p-2 hover:scale-101">
+                </div>
+    
+                <div>
+                    <label for="email" class="text-white block font-medium text-lg my-2">Email:</label>
+                    <input id="email" type="email" placeholder="Enter your email here" class="border border-white rounded-md w-full h-[50px] text-gray-400 p-2 hover:scale-101">
+                </div>
+    
+                <div>
+                    <label for="subject" class="text-white block font-medium text-lg my-2">Subject:</label>
+                    <input type="text" placeholder="Enter your subject here" class="border border-white rounded-md w-full h-[50px] text-gray-400 p-2 hover:scale-101">
+                </div>
+    
+                <div>
+                    <label for="message" class="text-white block font-medium text-lg my-2">Message:</label>
+                    <textarea type="text" rows="5" placeholder="Enter your message here" class="border border-white rounded-md w-full h-[100px] text-gray-400 p-2 hover:scale-101"></textarea>
+                </div>
+    
+                <div class="flex justify-center">
+                    <button type="submit" class="border-white text-white border-2 p-2 rounded-md md:my-5 my-10 w-[150px] font-semibold text-lg cursor-pointer hover:scale-105 drop-shadow-none transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]">Submit</button>
+                </div>
+            </form>
+        </div>
+    
+        <!-- Right Side: Social Media Links -->
+        <div class="w-[40%] md:grid md:grid-cols-2 md:grid-rows-2 md:gap-4 md:mr-8 md:mb-12 flex flex-col gap-4">
+            <!-- Email -->
+            <div class="border border-white p-4 md:rounded-md rounded-xl text-center hover:scale-105 drop-shadow-none transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]">
+                <img src="./images/mail-80.png" class="lg:ml-[80px] md:ml-[50px] md:w-[100px] w-[80px] md:h-[100px] h-[80px] ml-[40px]">
+                <p class="font-bold text-md text-gray-600 mt-4 px-4">Email</p>
+                <p class="font-semibold text-sm text-gray-300 text-center">prajput1236@gmail.com</p>
+            </div>
+    
+            <!-- LinkedIn -->
+            <div class="border border-white p-4 md:rounded-md rounded-xl text-center hover:scale-105 drop-shadow-none transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]">
+                <img src="./images/linkedIn.png" class="lg:ml-[80px] md:ml-[50px] my-2 md:w-[100px] w-[80px] md:h-[100px] h-[80px] ml-[40px]">
+                <p class="font-bold text-md text-gray-600">LinkedIn</p>
+                <p class="font-semibold text-sm text-gray-300">in/piyush-ran31</p>
+            </div>
+                
+                <!-- GitHub -->
+                <div class="border border-white p-4 md:rounded-md rounded-xl text-center hover:scale-105 drop-shadow-none transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]">
+                    <img src="./images/icons8-github-80.png" class="lg:ml-[80px] md:ml-[50px] my-2 md:w-[100px] w-[80px] md:h-[100px] h-[80px] ml-[40px]">
+                    <p class="font-bold text-md text-gray-600">GitHub</p>
+                    <p class="font-semibold text-sm text-gray-300">piyushrana31</p>
+                </div>
+                
+                <!-- X (Twitter) -->
+                <div class="border border-white p-4 md:rounded-md rounded-xl text-center hover:scale-105 drop-shadow-none transition-all duration-300 hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)]">
+                <img src="./images/twitter-80.png" class="lg:ml-[80px] md:ml-[50px] my-2 md:w-[100px] w-[80px] md:h-[100px] h-[80px] ml-[40px]">
+                <p class="font-bold text-md text-gray-600">X</p>
+                <p class="font-semibold text-sm text-gray-300">@piyush_rana</p>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* Loader Container */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e2f;
+    z-index: 9999;
+    opacity: 1; /* Fully visible at start */
+    transition: opacity 0.2s ease; /* Fade-out effect */
+}
+
+/* Hide Loader Container */
+.loader-container.hidden {
+    opacity: 0; /* Fade-out */
+    pointer-events: none; /* Ensure it's not interactive after hiding */
+}
+
+/* Loader */
+.loader {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    animation: fadeIn 0.5s ease; /* Fade-in effect for loader symbol */
+}
+
+/* Infinity symbol base */
+.infinity {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    border: 5px solid #ff9f1c;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+}
+
+/* Horizontal infinity symbol */
+.infinity.horizontal {
+    top: 20px;
+    left: 20px;
+    animation-direction: normal;
+}
+
+/* Vertical infinity symbol */
+.infinity.vertical {
+    top: 20px;
+    left: 20px;
+    transform: rotate(90deg);
+    animation-direction: reverse;
+}
+
+/* Loading text */
+.loading-text {
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Animations */
+@keyframes spin {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(0.8) rotate(180deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#content {
+    opacity: 0; /* Initially hidden */
+    display: block; /* Ensure it's part of the layout */
+}
+
+.loader-container.hidden + #content {
+    opacity: 1; /* Smooth fade-in after loader hides */
+}
+/* Initially hide the content */
+
+
+/* Loader hidden state */
+.loader-container.hidden {
+    opacity: 0; /* Fade out */
+    pointer-events: none;
+    transition: opacity 1s ease-out; /* Match fade-out duration */
+}
+.main-content {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease; /* Smooth fade-in */
+}

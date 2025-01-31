@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booting Up</title>
+    <link rel="stylesheet" href="bootingPage.css">
+</head>
+<body>
+    <div class="loader-container">
+        <div class="loader">
+            <!-- Horizontal infinity symbol -->
+            <div class="infinity horizontal"></div>
+            <!-- Vertical infinity symbol -->
+            <div class="infinity vertical"></div>
+            <!-- Loading text -->
+            <div class="loading-text">Booting Up !!!</div>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            document.querySelector('.loader-container').classList.add('hidden'); 
+            setTimeout(function() {
+                window.location.href = 'index.html';  
+            }, 150);
+        }, 1800);  
+    </script>
+</body>
+</html>
