@@ -281,6 +281,18 @@ body {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 60px 5%;
+  }
+}
+
 .section--alt {
   background: var(--bg2);
 }

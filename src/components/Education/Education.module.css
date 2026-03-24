@@ -97,3 +97,26 @@
   border: 1px solid;
   letter-spacing: 1px;
 }
+
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 0;
+  }
+  .line {
+    left: 18px;
+  }
+  .row {
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  .node {
+    width: 36px;
+    height: 36px;
+  }
+  .nodeIcon {
+    font-size: 16px;
+  }
+  .card {
+    padding: 20px;
+  }
+}

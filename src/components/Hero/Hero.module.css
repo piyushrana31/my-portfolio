@@ -44,8 +44,12 @@
 }
 
 @media (max-width: 480px) {
+  .heroGrid {
+    padding: 80px 20px 20px;
+  }
   .hackerWrapper {
-    display: none; /* Hide on very small screens to save space */
+    margin-top: 30px;
+    transform: scale(0.55);
   }
 }
 .preLabel { font-size: 13px; color: var(--gold); letter-spacing: 5px; margin-bottom: 18px; }
