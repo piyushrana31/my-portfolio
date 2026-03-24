@@ -24,7 +24,7 @@
 This is my personal developer portfolio built from scratch to showcase my projects, skills, and technical journey. It is designed with a **Cyberpunk / Hacker aesthetic**, featuring deep dark mode contrasts, neon glass-morphism, and a completely responsive layout.
 
 <p align="center">
-  <img src="https://media.giphy.com/media/qgQUggCGvnP19XcgRX/giphy.gif" width="400" alt="Coding GIF" style="border-radius: 10px;" />
+  <img src="./public/portfolioPic.jpeg" width="400" alt="Coding GIF" style="border-radius: 10px;" />
 </p>
 
 ### ✨ Key Features
