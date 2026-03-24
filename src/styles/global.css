@@ -1,0 +1,301 @@
+/* ─── DESIGN TOKENS ──────────────────────────────────────── */
+:root {
+  --bg: #020408;
+  --bg2: #050c14;
+  --bg3: #0a1628;
+  --cyan: #00f5ff;
+  --cyan2: #00c4cc;
+  --gold: #ffd700;
+  --gold2: #ffaa00;
+  --pink: #ff6b9d;
+  --purple: #7c3aed;
+  --green: #10b981;
+  --orange: #ff6b35;
+  --text: #e8f4f8;
+  --muted: #6b8fa3;
+  --cyan-rgb: 0, 245, 255;
+  --gold-rgb: 255, 215, 0;
+  --glass: rgba(var(--cyan-rgb), 0.04);
+  --glass2: rgba(var(--gold-rgb), 0.04);
+  --border: rgba(var(--cyan-rgb), 0.12);
+  --glow: 0 0 20px rgba(var(--cyan-rgb), 0.4), 0 0 60px rgba(var(--cyan-rgb), 0.1);
+  --glow-gold: 0 0 20px rgba(var(--gold-rgb), 0.4), 0 0 60px rgba(var(--gold-rgb), 0.1);
+  --font-display: 'Orbitron', monospace;
+  --font-body: 'Syne', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* ─── LIGHT MODE ─────────────────────────────────────────── */
+body.light {
+  --bg: #ffffff;
+  --bg2: #f8fafc;
+  --bg3: #f1f5f9;
+  --text: #0f172a;
+  --muted: #64748b;
+  --cyan: #0284c7;
+  --cyan2: #0369a1;
+  --cyan-rgb: 2, 132, 199;
+  --gold: #d97706;
+  --gold2: #b45309;
+  --gold-rgb: 217, 119, 6;
+  --pink: #db2777;
+  --purple: #7c3aed;
+  --green: #059669;
+  --orange: #ea580c;
+  --glass: rgba(15, 23, 42, 0.03);
+  --glass2: rgba(217, 119, 6, 0.05);
+  --border: rgba(15, 23, 42, 0.08);
+  --glow: 0 10px 30px rgba(2, 132, 199, 0.15);
+  --glow-gold: 0 10px 30px rgba(217, 119, 6, 0.15);
+}
+
+/* ─── RESET ──────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.6px;
+  overflow-x: hidden;
+  cursor: none;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* ─── SCROLLBAR ──────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--cyan), var(--gold));
+  border-radius: 2px;
+}
+
+/* ─── SELECTION ──────────────────────────────────────────── */
+::selection {
+  background: rgba(var(--cyan-rgb), 0.25);
+  color: var(--cyan);
+}
+
+/* ─── GLOBAL KEYFRAMES ───────────────────────────────────── */
+@keyframes blobPulse {
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1.15) rotate(3deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes flicker {
+
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform: scaleX(1.4);
+  }
+}
+
+@keyframes starStreak {
+  to {
+    transform: translateY(-300px) scaleY(3);
+    opacity: 0;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+
+  40%,
+  100% {
+    left: 150%;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+@keyframes glitchR {
+
+  0%,
+  100% {
+    clip-path: inset(0 0 90% 0);
+    transform: translate(3px, -2px);
+  }
+
+  25% {
+    clip-path: inset(50% 0 30% 0);
+    transform: translate(-3px, 2px);
+  }
+
+  50% {
+    clip-path: inset(20% 0 60% 0);
+    transform: translate(2px, -1px);
+  }
+
+  75% {
+    clip-path: inset(80% 0 5% 0);
+    transform: translate(-2px, 3px);
+  }
+}
+
+@keyframes glitchB {
+
+  0%,
+  100% {
+    clip-path: inset(80% 0 5% 0);
+    transform: translate(-3px, 2px);
+  }
+
+  25% {
+    clip-path: inset(10% 0 70% 0);
+    transform: translate(3px, -2px);
+  }
+
+  50% {
+    clip-path: inset(40% 0 40% 0);
+    transform: translate(-2px, 1px);
+  }
+
+  75% {
+    clip-path: inset(0 0 90% 0);
+    transform: translate(2px, -3px);
+  }
+}
+
+@keyframes launchRise {
+  0% {
+    transform: translateY(60px) scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes progressFill {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── UTILITY CLASSES ────────────────────────────────────── */
+.section {
+  padding: 110px 8%;
+  position: relative;
+}
+
+.section--alt {
+  background: var(--bg2);
+}
+
+.glass-card {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+}
+
+.orbitron {
+  font-family: var(--font-display);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
